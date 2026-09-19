@@ -21,7 +21,7 @@
 
 ---
 
-`docker ps -a` tells you a container **exited (137)**. It doesn't tell you that the kernel OOM-killed it at 2 a.m., after a memory leak your logs warned you about three times. Recruiters, teammates and **AI agents** debugging your stack at 3 a.m. deserve better.
+`docker ps -a` tells you a container **exited (137)**. It doesn't tell you that the kernel OOM-killed it at 2 a.m., after a memory leak your logs warned you about three times. I was the one staring at that exit code at 3 a.m. one time too many.
 
 **container-autopsy** is a forensic tool for dead containers. It collects the evidence (exit code, OOM state, restart count, uptime before death, last log lines), runs a deterministic rule engine over it and hands you a **markdown autopsy report**: cause of death, contributing evidence, and the exact fix.
 
@@ -80,7 +80,7 @@ Add `--ai` and your **local** agent CLI (e.g. [opencode](https://opencode.ai)) g
 python container_autopsy.py my-app --ai
 ```
 
-## 🚀 The viral part — share your autopsies
+## 📣 Share your autopsies
 
 Add `--share` and the report ends with a paste-ready block:
 

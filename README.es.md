@@ -21,7 +21,7 @@
 
 ---
 
-`docker ps -a` te dice que un contenedor **exited (137)**. No te dice que el kernel lo mató por OOM a las 2 a.m., después de que tus logs advirtieran tres veces sobre una fuga de memoria. Tus compañeros, los reclutadores y los **agentes de IA** que depuran tu stack a las 3 a.m. merecen algo mejor.
+`docker ps -a` te dice que un contenedor **exited (137)**. No te dice que el kernel lo mató por OOM a las 2 a.m., después de que tus logs advirtieran tres veces sobre una fuga de memoria. Ese exit code a las 3 a.m. me tocó verlo en persona una vez de más.
 
 **container-autopsy** es una herramienta forense para contenedores muertos. Recolecta la evidencia (exit code, estado de OOM, contador de restarts, uptime antes de la muerte, últimas líneas de log), le aplica un motor de reglas determinista y te entrega un **informe de autopsia en markdown**: causa de muerte, evidencia contribuyente y el fix exacto.
 
@@ -73,7 +73,7 @@ Agrega `--ai` y tu agent CLI **local** (ej. [opencode](https://opencode.ai)) rec
 python container_autopsy.py my-app --ai
 ```
 
-## 🚀 La parte viral — comparte tus autopsias
+## 📣 Comparte tus autopsias
 
 Agrega `--share` y el informe termina con un bloque listo para pegar:
 
