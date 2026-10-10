@@ -1,0 +1,11 @@
+# Run an autopsy from a container — no local install needed:
+#   docker compose run --rm autopsy <container-name>
+#   docker compose run --rm autopsy <container-name> --ai
+services:
+  autopsy:
+    build: .
+    image: fernedy/container-autopsy:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    # pass the target container as the command, e.g.:
+    #   docker compose run --rm autopsy my-app
